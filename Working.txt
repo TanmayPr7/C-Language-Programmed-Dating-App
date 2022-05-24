@@ -9,10 +9,17 @@ facility, you can ask for the problems you are facing while using the app to our
 you can give feddback to our app through chatbot, can contact us on our customer care number or 
 email or can simply exit the chatbot service and can use application.
 
-#Basically, the app will start with asking you to SignUp or LogIn to app. If you choose Signup
+# Basically, the app will start with asking you to SignUp or LogIn to app. If you choose Signup
 it will ask you that you want to Signup with gmail or phone number, once you selected and signuped
 into the app it will ask you to create your profile in an intresting way, after you have created
 your profile app will you some profiles similar to your's, you can then choose whom you want to date
 or not and can easily view anyones profile, then if you want to check settings option you can easily 
 check settings and can view your profile, can logout or talk to our virtual assiatant "Friday" or you
-can easily exit the app.
+can easily exit the app.If you choose LogIn it will check that you have any registered account or not 
+on the app, if not then app will be simply exited and if you have registered account on the app, it will
+ask you for your registered email or number and password you created while setuping your account and if 
+you have enterd incorrect details app will be simply exited or if you have entred correct details you
+will be logIned into your registered account and then can easily use further features and processes of
+the app, as we have used after signuping and creating our account and profile.All the user's informations
+will be saved in different files in same folder in ".txt" format and will be updated according to user's
+new information and user's can also access these files easily in the same folder.
