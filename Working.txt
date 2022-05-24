@@ -1,4 +1,10 @@
 # This is C++ language project, in which user have to register and create their profile
 which will be saved in user's profile and then on the basis of your passions and hobbies
 you have enterd while creating your profile, app will sugest you some profiles similar to 
-your's for dating.
+your's for dating.Then you can view others profiles and decide that you want to date then 
+or not and you can swipe right for further process or can swipe left to reject that profile
+and can view other profiles.It also have the Chatbot service for user's problems, which you 
+access from settings, in settings you can view your profile, can logout or can use our chatbot
+facility, you can ask for the problems you are facing while using the app to our virtual chatbot,
+you can give feddback to our app through chatbot, can contact us on our customer care number or 
+email or can simply exit the chatbot service and can use application.
