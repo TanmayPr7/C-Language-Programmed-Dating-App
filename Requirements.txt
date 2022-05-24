@@ -1,0 +1,5 @@
+# Requirements
+1.Programming IDE(VS Code)
+2.G++ Compiler for compiling C++ Programmes
+3.Device for Programming(PC or Laptop)
+5.Code for generating OTP
