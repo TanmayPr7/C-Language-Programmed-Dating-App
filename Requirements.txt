@@ -3,3 +3,10 @@
 2.G++ Compiler for compiling C++ Programmes
 3.Device for Programming(PC or Laptop)
 5.Code for generating OTP
+
+# Header Files Required
+1.Iostream
+2.Cstdlib
+3.Cstring
+4.Ctime
+5.Fstream
