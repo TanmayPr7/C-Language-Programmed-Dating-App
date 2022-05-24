@@ -23,3 +23,5 @@ will be logIned into your registered account and then can easily use further fea
 the app, as we have used after signuping and creating our account and profile.All the user's informations
 will be saved in different files in same folder in ".txt" format and will be updated according to user's
 new information and user's can also access these files easily in the same folder.
+
+# This is the basic working of C++ Language Programmed Dating App:)
