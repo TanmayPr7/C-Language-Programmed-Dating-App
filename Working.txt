@@ -8,3 +8,11 @@ access from settings, in settings you can view your profile, can logout or can u
 facility, you can ask for the problems you are facing while using the app to our virtual chatbot,
 you can give feddback to our app through chatbot, can contact us on our customer care number or 
 email or can simply exit the chatbot service and can use application.
+
+#Basically, the app will start with asking you to SignUp or LogIn to app. If you choose Signup
+it will ask you that you want to Signup with gmail or phone number, once you selected and signuped
+into the app it will ask you to create your profile in an intresting way, after you have created
+your profile app will you some profiles similar to your's, you can then choose whom you want to date
+or not and can easily view anyones profile, then if you want to check settings option you can easily 
+check settings and can view your profile, can logout or talk to our virtual assiatant "Friday" or you
+can easily exit the app.
