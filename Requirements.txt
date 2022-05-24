@@ -10,3 +10,5 @@
 3.Cstring
 4.Ctime
 5.Fstream
+
+# That's it these all the basic requirements for this project:)
