@@ -29,3 +29,24 @@ typedef struct BasicInfo{
     string number;         //Structure to store LogIn Information
     string pass;
 }info;
+
+
+class personal{
+    public:
+    string name;
+    int age;               //Class to Create and Store user's Profile data
+    string gender;
+    string passion[5];
+    
+    personal(){}
+    
+    personal(string n, int a, string g, string p[5]){
+        name = n;
+        age = a;
+        gender = g;
+        
+        for(int i=0; i<5; i++){
+            passion[i] = p[i];
+        }
+    }
+};
