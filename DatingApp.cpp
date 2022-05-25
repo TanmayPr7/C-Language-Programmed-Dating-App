@@ -724,3 +724,105 @@ void Match(){               //Function to make couple matches
     }
     else{}
 }
+
+
+void PersonalInfo(){     //Function to take & store data to, class object(user)
+  int showme;
+  personal user;
+  ofstream Out("Profile.txt");              
+  ofstream OUT("Others.txt");
+  ofstream O("Passion.txt");
+
+  cout<<"Entre your name:"<<endl;
+  cin>>user.name;
+  cout<<endl;
+  
+  Out<<user.name;
+  Out<<endl;
+
+  cout<<"Entre your age:" << endl;
+  cin>>user.age;
+  cout<<endl;
+  Out<<user.age;
+  Out<<endl;
+
+  if((user.age<18) || (user.age>40)){
+      cout <<"Sorry according to our age policy, you are not eligible to use Finder:("<<endl;
+      exit (0);
+  }
+  
+  else{
+      cout<<"Entre your gender:"<<endl;
+      cin>>user.gender;
+      cout<<endl;
+      Out<<user.gender;
+      Out<<endl;
+
+      cout<<"Whom you want to date?"<<endl;
+      cout<<"Press 1 for Men:)"<<endl;
+      cout<<"Press 2 for Women:)"<<endl;
+      cout<<"Press 3 for Everyone:)"<<endl;
+      cin>>showme;
+      
+      if(showme>3){
+          cout<<"Sorry you have pressed wrong key, Please try again:("<<endl;
+          cin>>showme;
+          
+          if(showme>3){
+              cout<<"Sorry you have pressed wrong key, Error:("<<endl;
+              exit(0);
+          }
+          
+          else{}
+      }
+      
+      else{}
+      
+      if(showme==1){
+          Out<<"Male";
+          Out<<endl;
+      }
+      
+      else if(showme==2){
+          Out<<"Female";
+          Out<<endl;
+      }
+      
+      else{
+          Out<<"Everyone";
+          Out<<endl;
+      }
+      
+      cout<<endl;
+      cout<<"                                                    Hey, You are almost there:)"<<endl;
+	  cout<<endl;
+      cout<<"Add atleast five of your Passions or Hobbies to complete your Profile:)"<<endl;
+      cout<<"=>";
+      Out<<endl;
+      
+      for(int i=0;i<5;i++){
+          cin>>user.passion[i];
+          O<<user.passion[i];
+          O<<endl;
+      }
+	  
+	  check++;
+	  OUT<<check;
+	  OUT<<endl;
+	  
+	  cout<<endl;
+	  cout<<"                                  Congratulations! You have successfully created your account:)"<<endl;
+	  cout<<"                                                   Now, be your own Matchmaker"<<endl;
+	  cout<<endl;
+	  cout<<endl;
+	  OUT.close();
+	  O.close();
+	  Out.close();
+	  
+	  Match();
+    }
+}
+
+
+
+//////////////////////////////////////////////////////Main Code////////////////////////////////////////////////////////
