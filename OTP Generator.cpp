@@ -4,3 +4,8 @@
 #include <cstdlib>
 #include <ctime>
 
+void otpGen(){
+    int max=9999;
+    srand(time(0));        //Function to Generate OTP
+    otp=rand()%max+999;
+}
