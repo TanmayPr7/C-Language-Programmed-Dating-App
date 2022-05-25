@@ -60,3 +60,9 @@ void quar(){                //Function to display types of Quarries
     cout<<"     Press 4 for (No, Thanks)"<<endl;
 }
 
+
+void prob(){                //Function to display types of problems
+    cout<<"Press 1 if, App is not Responding properly:("<<endl;
+    cout<<"Press 2 if, Recommendations of profiles is not accurate, according to you:("<<endl;
+    cout<<"Press 3 if, You are facing any other types of problem:("<<endl;
+}
