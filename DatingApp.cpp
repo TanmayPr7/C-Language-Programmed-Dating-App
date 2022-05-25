@@ -59,3 +59,4 @@ void quar(){                //Function to display types of Quarries
     cout<<"     Press 3 for (Contact Us)"<<endl;
     cout<<"     Press 4 for (No, Thanks)"<<endl;
 }
+
