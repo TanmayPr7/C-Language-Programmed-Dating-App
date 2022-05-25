@@ -203,3 +203,11 @@ void display(){             //Function to display starting content to user
     cout<<"                                          Already have an account? Press 2 to Login:)"<<endl;
     cin>>dec1;                                       
 }
+
+
+void Setdisp(){             //Function to display Settings
+    cout<<endl;
+    cout<<"                                                        Press 5 for Settings"<<endl;
+    cout<<"                                                                 or"<<endl;
+    cout<<"                                                         Press 0 to Exit app"<<endl;
+}
