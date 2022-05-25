@@ -50,3 +50,12 @@ class personal{
         }
     }
 };
+
+
+void quar(){                //Function to display types of Quarries
+    cout<<"Hi:)"<<endl;
+    cout<<"Press 1 for (Problem in using App)"<<endl;
+    cout<<"      Press 2 for (Feedback)"<<endl;
+    cout<<"     Press 3 for (Contact Us)"<<endl;
+    cout<<"     Press 4 for (No, Thanks)"<<endl;
+}
