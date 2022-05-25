@@ -3,6 +3,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+using namespace std;
+int otp;
 
 void otpGen(){
     int max=9999;
@@ -12,5 +14,6 @@ void otpGen(){
 
 int main(){
     otpGen();
+    cout<<otp<<endl;
     return 0;
 }
