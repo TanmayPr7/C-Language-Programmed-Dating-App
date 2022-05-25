@@ -5,10 +5,6 @@
 #include <cstring>
 #include <fstream>
 
-#include <iostream>
-#include <cstring>
-#include <fstream>
-
 void feedback(){            //Function to take feedback from users
     string fb;                                    
     ofstream fe("Feedback.txt", fstream::app);
@@ -131,4 +127,9 @@ void ChatBot(){
             quar();
         }
     }
+}
+
+int main(){
+    ChatBot();
+    return 0;
 }
