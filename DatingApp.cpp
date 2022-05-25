@@ -192,3 +192,14 @@ void ChatBot(){
         }
     }
 }
+
+
+void display(){             //Function to display starting content to user
+    cout<<"        *****************************************************Finder***************************************************"<<endl;
+    cout<<"                                                   :)Be your own Matchmaker:)"<<endl;
+    cout<<endl;
+    cout<<endl;
+    cout<<"                                                      Press 1 to Sign Up:)"<<endl;
+    cout<<"                                          Already have an account? Press 2 to Login:)"<<endl;
+    cin>>dec1;                                       
+}
