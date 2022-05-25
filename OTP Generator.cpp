@@ -9,3 +9,8 @@ void otpGen(){
     srand(time(0));        //Function to Generate OTP
     otp=rand()%max+999;
 }
+
+int main(){
+    otpGen();
+    return 0;
+}
