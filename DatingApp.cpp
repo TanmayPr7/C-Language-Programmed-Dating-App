@@ -66,3 +66,24 @@ void prob(){                //Function to display types of problems
     cout<<"Press 2 if, Recommendations of profiles is not accurate, according to you:("<<endl;
     cout<<"Press 3 if, You are facing any other types of problem:("<<endl;
 }
+
+
+void feedback(){            //Function to take feedback from users
+    string fb;                                    
+    ofstream fe("Feedback.txt", fstream::app);
+    cout<<"Enter your Rating for our service please:)"<<endl;
+    cout<<"How many stars do you want to give us on the scale of 1 to 5:)"<<endl;
+    cout<<"                         * * * * *"<<endl;
+    cin>>fb;
+    
+    if(fb.size()<6){
+        cout<<"Your Rating is "<<fb<<", Thank You for giving us your Rating and your Time Sir:)"<<endl;
+        fe<<fb<<endl;
+    }
+    else{
+        cout<<"Your Rating is invalid, please give us valid Rating Sir:)"<<endl;
+        cout<<endl;
+        feedback();
+    }
+    fe.close();
+}
