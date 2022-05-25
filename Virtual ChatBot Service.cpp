@@ -4,6 +4,22 @@
 #include <cstdlib>
 #include <cstring>
 #include <fstream>
+using namespace std;
+
+void quar(){                //Function to display types of Quarries
+    cout<<"Hi:)"<<endl;
+    cout<<"Press 1 for (Problem in using App)"<<endl;
+    cout<<"      Press 2 for (Feedback)"<<endl;
+    cout<<"     Press 3 for (Contact Us)"<<endl;
+    cout<<"     Press 4 for (No, Thanks)"<<endl;
+}
+
+
+void prob(){                //Function to display types of problems
+    cout<<"Press 1 if, App is not Responding properly:("<<endl;
+    cout<<"Press 2 if, Recommendations of profiles is not accurate, according to you:("<<endl;
+    cout<<"Press 3 if, You are facing any other types of problem:("<<endl;
+}
 
 void feedback(){            //Function to take feedback from users
     string fb;                                    
