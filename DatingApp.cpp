@@ -826,3 +826,217 @@ void PersonalInfo(){     //Function to take & store data to, class object(user)
 
 
 //////////////////////////////////////////////////////Main Code////////////////////////////////////////////////////////
+
+
+int main(){
+    int otp4;
+    info user;
+    string o;
+    ifstream IN("Others.txt");
+    getline(IN, o);
+    IN.close();
+    
+    if(o=="1"){
+        cout<<"                                             Welcome Back!, Be your own Matchmaker:)"<<endl;
+        Match();
+    }
+    
+    else{
+    display();                                                  //Main Code
+    if(dec1==1){
+        cout<<endl;
+        cout<<"                                                 Press 1 to Sign Up with Gmail:)"<<endl;
+        cout<<"                                              Press 2 to Sign Up with Phone Number:)"<<endl;
+        cin>>dec2;
+        ofstream out("LogIn.txt");
+        string num;
+        
+        if(dec2==1){
+	        cout<<"Entre your Gmail:"<<endl;
+	        cin>>user.gmail;
+	        cout<<endl;
+	        out<<user.gmail;
+	        out<<endl;
+	        
+	        cout<<"Create a Strong Password:"<<endl;
+	        cin>>user.pass;
+	        cout<<endl;                                              //Sign Up Code
+	        out<<user.pass;
+	        out<<endl;
+	        
+	        cout<<"We have sent you a 4-digit verification code on this gmail: "<<user.gmail<<" ,please fill it below:"<<endl;
+	        otpGen();
+	        OTP = to_string(otp);
+	        
+	        if(OTP.size()>4){
+	            cout<<"Error!"<<endl;
+	            otpGen();
+	            
+	        }
+	        else{}
+	        
+	        cout<<otp<<endl;
+	        cin>>otp4;
+
+
+	        if(otp4==otp){
+	            cout<<"                                                       Welcome To Finder:)"<<endl;
+	            cout<<endl;
+	            cout<<"                                                         Create Account:)"<<endl;
+	            cout<<"                                                  Make your Profile Intresting:)"<<endl;
+	            PersonalInfo ();
+	        }
+
+	        else{
+	            cout<<"The code you entered is invalid, Please try again:(" <<endl;
+	            cin>>otp4;
+
+	            if(otp4==otp){
+		            cout<<"                                                       Welcome To Finder:)"<<endl;
+		            cout<<endl;
+		            cout<<"                                                         Create Account:)"<<endl;
+		            cout<<"                                                  Make your Profile Intresting:)"<<endl;
+		            PersonalInfo();
+		        }
+
+	            else{
+		            cout<<"The code you entered is invalid, Please try again later:("<<endl;
+		        }
+
+	        }
+
+	    }
+        else if (dec2 == 2){
+            
+	        cout<<"Entre your Phone Number:"<<endl;
+	        cin>>user.number;
+	        cout<<endl;
+	        num=user.number;
+	  
+	        if(num.size()>10){
+	            cout<<"You have enterd an invalid Phone number! Please try again:("<<endl;
+	            cin>>user.number;
+	            cout<<endl;
+	            num=user.number;
+	      
+	            if(num.size()>10){
+	                cout<<"You have enterd an invalid Phone number! Please try again later:("<<endl;
+	                exit(0);
+	            }
+	      
+	            else{}
+	        }
+	  
+	        else{}
+	        
+	        out<<user.number;
+	        out<<endl;
+	        
+	        cout<<"Create a Strong Password:"<<endl;
+	        cin>>user.pass;
+	        cout<<endl;
+	        out<<user.pass;
+	        out<<endl;
+	        out.close();
+	        
+	        cout<<"We have sent you a 4-digit verification code on this number: "<<user.number<<" ,please fill it below:"<<endl;
+	        otpGen();
+	        OTP = to_string(otp);
+	        
+	        if(OTP.size()>4){
+	            otpGen();
+	            
+	        }
+	        else{}
+	        
+	        cout<<otp<<endl;
+	        cin>>otp4;
+
+	        if(otp4==otp){
+	            
+	            cout<<"                                                       Welcome To Finder:)"<<endl;
+	            cout<<endl;
+	            cout<<"                                                         Create Account:)"<<endl;
+	            cout<<"                                                  Make your Profile Intresting:)"<<endl;
+	            PersonalInfo();
+	        }
+	        
+	        else{
+	            cout<<"The code you entered is invalid, Please try again:("<<endl;
+	            cin>>otp4;
+
+	            if(otp4==otp){
+		            cout<<"                                                       Welcome To Finder:)"<<endl;
+		            cout<<endl;
+		            cout<<"                                                         Create Account:)"<<endl;
+		            cout<<"                                                  Make your Profile Intresting:)"<<endl;
+		            PersonalInfo();
+		        }
+
+	            else{
+		            cout<<"The code you entered is invalid, Please try again later:("<<endl;
+		        }
+
+	        }
+
+	    }
+
+        else{
+	        cout<<"Sorry you have pressed wrong key, Error:("<<endl;
+	    }
+
+    }
+    
+    else if(dec1==2){
+        string Check;
+        ifstream IN("Others.txt");
+        getline(IN, Check);
+        IN.close();
+        
+        if(Check=="1"){
+            string Id, Pass;
+            string id, pas;
+        
+            ifstream in("LogIn.txt");
+            getline(in, Id);
+            getline(in, Pass);
+        
+            cout<<"Entre your registered Gmail or Phone Number:"<<endl;           //Login Code
+            cin>>id;
+            cout<<endl;
+        
+            cout<<"Entre correct Password:"<<endl;
+            cin>>pas;
+            cout<<endl;
+        
+            if((Id==id) && (Pass==pas)){
+                string n;
+                ifstream in("Profile.txt");
+                getline(in, n);
+                
+                cout<<"                                                     Welcome Back, "<<n<<endl;
+                in.close();
+                Match();
+            }
+            else{
+                cout<<"You have entered wrong Id or Password, Please try again later:("<<endl;
+                exit(0);
+            }
+            in.close();
+        }
+        
+        else{
+            cout<<"You don't have any account, please first Register or Sign Up:("<<endl;
+            exit(0);
+        }
+        
+    }
+    
+    else{
+        cout<<"Sorry you have pressed wrong key, Error:("<<endl;
+    }
+    }
+    return 0;
+}
+
+
