@@ -329,3 +329,398 @@ void settings(){            //Function to execute settings
     }
     
 }
+
+
+void Match(){               //Function to make couple matches
+    ifstream sh("Profile.txt");
+    string showme;
+    int view;
+    
+    string Gp[5] = {"Reading", "Travelling", "Singing", "Painting", "Programming"};
+    string Bp[5] = {"Sports", "Workout", "Movies", "Music", "Guitar"};
+    
+    personal u1("Angel", 24, "Female", Gp);
+    personal u2("Archit", 22, "Male", Bp);               
+    
+    cout<<"                                  Here are some of the perfect matches for you, Check it Out:)"<<endl;
+    cout<<endl;
+    
+    for (int lineno=1; lineno<5; lineno++){
+      if(lineno==4){
+          getline(sh, showme);
+      }
+      else{
+          getline(sh, showme);
+      }
+    }
+    sh.close();
+    
+    if(showme=="Male"){
+        if(u1.gender=="Male"){
+            ifstream pin("Passion.txt");
+            string P[5];
+            int match;
+            
+            for(int i=0; i<5; i++){
+                getline(pin, P[i]);
+            }
+            pin.close();
+            
+            for(int i=0; i<5; i++){
+                  
+                for(int j=0; j<5; j++){
+                      
+                    if(P[i]==u1.passion[j]){
+                        match++;
+                    }
+                }
+            }
+            
+            if(match>=2){
+                cout<<u1.name<<", Press 1 to View Profile:)"<<endl;
+                cin>>view;
+                cout<<endl;
+                
+                if(view==1){
+                    int dec;
+                    cout<<"Name: "<<u1.name<<endl;
+                    cout<<"Age: "<<u1.age<<endl;
+                    cout<<"Gender: "<<u1.gender<<endl;
+                    cout<<endl;
+                    cout<<"Passions and Hobbies:"<<endl;
+                    
+                    for(int i=0; i<5; i++){
+                        cout<<(i+1)<<".";
+                        cout<<u1.passion[i]<<endl;
+                    }
+                    
+                    cout<<endl;
+                    cout<<"                                               Press 1 to swipe  Right this profile:)"<<endl;
+                    cout<<"                                                Press 2 to swipe Left this profile:)"<<endl;
+                    cin>>dec;
+                    
+                    if(dec==1){
+                        cout<<"Congrats! You have done your job, now wait for otherside's response:)"<<endl;
+                        settings();
+                    }
+                    else if(dec==2){
+                        Match();
+                    }
+                    else{
+                        cout<<"Sorry you have pressed wrong key, please try again:("<<endl;
+                        cout<<endl;
+                        Match();
+                    }
+                }
+                else{}
+            }
+            else{
+                cout<<"There is no perfect match for you, make sure to Optimize your Profile properly:)"<<endl;
+            }
+        }
+        else if(u2.gender=="Male"){
+            ifstream pin("Passion.txt");
+            string P[5];
+            int match;
+            
+            for(int i=0; i<5; i++){
+                getline(pin, P[i]);
+            }
+            pin.close();
+            
+            for(int i=0; i<5; i++){
+                  
+                for(int j=0; j<5; j++){
+                      
+                    if(P[i]==u2.passion[j]){
+                        match++;
+                    }
+                }
+            }
+            
+            if(match>=2){
+                cout<<u2.name<<", Press 1 to View Profile:)"<<endl;
+                cin>>view;
+                cout<<endl;
+                
+                if(view==1){
+                    int dec;
+                    cout<<"Name: "<<u2.name<<endl;
+                    cout<<"Age: "<<u2.age<<endl;
+                    cout<<"Gender: "<<u2.gender<<endl;
+                    cout<<endl;
+                    cout<<"Passions and Hobbies:"<<endl;
+                    
+                    for(int i=0; i<5; i++){
+                        cout<<(i+1)<<".";
+                        cout<<u2.passion[i]<<endl;
+                    }
+                    
+                    cout<<endl;
+                    cout<<"                                               Press 1 to swipe  Right this profile:)"<<endl;
+                    cout<<"                                                Press 2 to swipe Left this profile:)"<<endl;
+                    cin>>dec;
+                    
+                    if(dec==1){
+                        cout<<"Congrats! You have done your job, now wait for otherside's response:)"<<endl;
+                        settings();
+                    }
+                    else if(dec==2){
+                        Match();
+                    }
+                    else{
+                        cout<<"Sorry you have pressed wrong key, please try again:("<<endl;
+                        cout<<endl;
+                        Match();
+                    }
+                }
+                else{}
+            }
+            else{
+                cout<<"There is no perfect match for you, make sure to Optimize your Profile properly:)"<<endl;
+            }
+        }
+    }
+    else if(showme=="Female"){
+        if(u1.gender=="Female"){
+            ifstream pin("Passion.txt");
+            string P[5];
+            int match;
+            
+            for(int i=0; i<5; i++){
+                getline(pin, P[i]);
+            }
+            pin.close();
+            
+            for(int i=0; i<5; i++){
+                  
+                for(int j=0; j<5; j++){
+                      
+                    if(P[i]==u1.passion[j]){
+                        match++;
+                    }
+                }
+            }
+            
+            if(match>=2){
+                cout<<u1.name<<", Press 1 to View Profile:)"<<endl;
+                cin>>view;
+                cout<<endl;
+                
+                if(view==1){
+                    int dec;
+                    cout<<"Name: "<<u1.name<<endl;
+                    cout<<"Age: "<<u1.age<<endl;
+                    cout<<"Gender: "<<u1.gender<<endl;
+                    cout<<endl;
+                    cout<<"Passions and Hobbies:"<<endl;
+                    
+                    for(int i=0; i<5; i++){
+                        cout<<(i+1)<<".";
+                        cout<<u1.passion[i]<<endl;
+                    }
+                    
+                    cout<<endl;
+                    cout<<"                                               Press 1 to swipe  Right this profile:)"<<endl;
+                    cout<<"                                                Press 2 to swipe Left this profile:)"<<endl;
+                    cin>>dec;
+                    
+                    if(dec==1){
+                        cout<<"Congrats! You have done your job, now wait for otherside's response:)"<<endl;
+                        settings();
+                    }
+                    else if(dec==2){
+                        Match();
+                    }
+                    else{
+                        cout<<"Sorry you have pressed wrong key, please try again:("<<endl;
+                        cout<<endl;
+                        Match();
+                    }
+                }
+                else{}
+            }
+            else{
+                cout<<"There is no perfect match for you, make sure to Optimize your Profile properly:)"<<endl;
+            }
+        }
+        else if(u2.gender=="Female"){
+            ifstream pin("Passion.txt");
+            string P[5];
+            int match;
+            
+            for(int i=0; i<5; i++){
+                getline(pin, P[i]);
+            }
+            pin.close();
+            
+            for(int i=0; i<5; i++){
+                  
+                for(int j=0; j<5; j++){
+                      
+                    if(P[i]==u2.passion[j]){
+                        match++;
+                    }
+                }
+            }
+            
+            if(match>=2){
+                cout<<u2.name<<", Press 1 to View Profile:)"<<endl;
+                cin>>view;
+                cout<<endl;
+                
+                if(view==1){
+                    int dec;
+                    cout<<"Name: "<<u2.name<<endl;
+                    cout<<"Age: "<<u2.age<<endl;
+                    cout<<"Gender: "<<u2.gender<<endl;
+                    cout<<endl;
+                    cout<<"Passions and Hobbies:"<<endl;
+                    
+                    for(int i=0; i<5; i++){
+                        cout<<(i+1)<<".";
+                        cout<<u2.passion[i]<<endl;
+                    }
+                    
+                    cout<<endl;
+                    cout<<"                                               Press 1 to swipe  Right this profile:)"<<endl;
+                    cout<<"                                                Press 2 to swipe Left this profile:)"<<endl;
+                    cin>>dec;
+                    
+                    if(dec==1){
+                        cout<<"Congrats! You have done your job, now wait for otherside's response:)"<<endl;
+                        settings();
+                    }
+                    else if(dec==2){
+                        Match();
+                    }
+                    else{
+                        cout<<"Sorry you have pressed wrong key, please try again:("<<endl;
+                        cout<<endl;
+                        Match();
+                    }
+                }
+                else{}
+            }
+            else{
+                cout<<"There is no perfect match for you, make sure to Optimize your Profile properly:)"<<endl;
+            }
+        }
+    }
+    else if(showme=="Everyone"){
+        ifstream pin("Passion.txt");
+        string P[5];
+        int match;
+            
+        for(int i=0; i<5; i++){
+            getline(pin, P[i]);
+        }
+        pin.close();
+        
+        for(int i=0; i<5; i++){
+                  
+            for(int j=0; j<5; j++){
+                      
+                if(P[i]==u1.passion[j]){
+                    match++;
+                }
+            }
+        }
+        
+        if(match>=2){
+            cout<<u1.name<<", Press 1 to View Profile:)"<<endl;
+        }
+        else{}
+        
+        int matc;
+        
+        for(int i=0; i<5; i++){
+                  
+            for(int j=0; j<5; j++){
+                      
+                if(P[i]==u2.passion[j]){
+                    matc++;
+                }
+            }
+        }
+        
+        if(matc>=2){
+            cout<<u2.name<<", Press 2 to View Profile:)"<<endl;
+        }
+        else{}
+        
+        if((match<2) && (matc<2)){
+            cout<<"There is no perfect match for you, make sure to Optimize your Profile properly:)"<<endl;
+        }
+        
+        else{
+            cin>>view;
+            cout<<endl;
+        
+            if(view==1){
+                int dec;
+                cout<<"Name: "<<u1.name<<endl;
+                cout<<"Age: "<<u1.age<<endl;
+                cout<<"Gender: "<<u1.gender<<endl;
+                cout<<endl;
+                cout<<"Passions and Hobbies:"<<endl;
+                    
+                for(int i=0; i<5; i++){
+                    cout<<(i+1)<<".";
+                    cout<<u1.passion[i]<<endl;
+                }
+                
+                cout<<endl;
+                cout<<"                                               Press 1 to swipe  Right this profile:)"<<endl;
+                cout<<"                                                Press 2 to swipe Left this profile:)"<<endl;
+                cin>>dec;
+                
+                if(dec==1){
+                    cout<<"Congrats! You have done your job, now wait for otherside's response:)"<<endl;
+                    settings();
+                }
+                else if(dec==2){
+                    Match();
+                }
+                else{
+                    cout<<"Sorry you have pressed wrong key, please try again:("<<endl;
+                    cout<<endl;
+                    Match();
+                }
+            }
+            else if(view==2){
+                int dec;
+                cout<<"Name: "<<u2.name<<endl;
+                cout<<"Age: "<<u2.age<<endl;
+                cout<<"Gender: "<<u2.gender<<endl;
+                cout<<endl;
+                cout<<"Passions and Hobbies:"<<endl;
+                    
+                for(int i=0; i<5; i++){
+                    cout<<(i+1)<<".";
+                    cout<<u2.passion[i]<<endl;
+                }
+                
+                cout<<endl;
+                cout<<"                                               Press 1 to swipe  Right this profile:)"<<endl;
+                cout<<"                                                Press 2 to swipe Left this profile:)"<<endl;
+                cin>>dec;
+                
+                if(dec==1){
+                    cout<<"Congrats! You have done your job, now wait for otherside's response:)"<<endl;
+                    settings();
+                }
+                else if(dec==2){
+                    Match();
+                }
+                else{
+                    cout<<"Sorry you have pressed wrong key, please try again:("<<endl;
+                    cout<<endl;
+                    Match();
+                }
+            }
+            else{}
+        }
+    }
+    else{}
+}
