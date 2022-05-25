@@ -21,3 +21,8 @@ void feedback(){            //Function to take feedback from users
     }
     fe.close();
 }
+
+int main(){
+    feedback();
+    return 0;
+}
