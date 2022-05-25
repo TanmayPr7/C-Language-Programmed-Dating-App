@@ -16,3 +16,9 @@ void Match();
 
 
 ///////////////////////////////////////////////////////Functions & Classes//////////////////////////////////////////////
+
+void otpGen(){
+    int max=8999;
+    srand(time(0));        //Function to Generate OTP
+    otp=rand()%max+999;
+}
