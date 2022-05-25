@@ -211,3 +211,121 @@ void Setdisp(){             //Function to display Settings
     cout<<"                                                                 or"<<endl;
     cout<<"                                                         Press 0 to Exit app"<<endl;
 }
+
+
+void settings(){            //Function to execute settings
+    int set;
+    Setdisp();
+    
+    cin>>set;
+        
+    if(set==5){
+        int dec;
+        cout<<"Press 1 to View Profile:)"<<endl;
+        cout<<"Press 2 to Logout:)"<<endl;
+        cout<<"Press 3 to Contact Us:)"<<endl;
+        cin>>dec;
+        cout<<endl;
+            
+        if(dec==1){
+            string pro;
+            string pasi;
+            ifstream In("LogIn.txt");
+            ifstream in("Profile.txt");
+            ifstream IN("Passion.txt");
+                
+            getline(In, pro);
+            cout<<"Registered Id or Number: "<<pro<<endl;
+                
+            getline(In, pro);
+            cout<<"Password: "<<pro<<endl;
+                
+            getline(in, pro);
+            cout<<"Name: "<<pro<<endl;
+            
+            getline(in, pro);
+            cout<<"Age: "<<pro<<endl;
+            
+            getline(in, pro);
+            cout<<"Gender: "<<pro<<endl;
+            cout<<endl;
+                
+            cout<<"Passions and Hobbies:"<<endl;
+                
+            for(int i=0; i<5; i++){
+                getline(IN, pasi);
+                cout<<(i+1)<<".";
+                cout<<pasi<<endl;
+            }
+            cout<<endl;
+            settings();   
+            IN.close();
+            in.close();
+            In.close();
+        }
+        
+        else if(dec==2){
+            int l;
+            cout<<endl;
+            cout<<"                                                  Already a user, Press 1 to login:)"<<endl;
+            cout<<"                                                         Press 2 to exit app:)"<<endl;
+            cin>>l;
+            
+            if(l==1){
+                string Id, Pass;
+                string id, pas;
+        
+                ifstream in("LogIn.txt");
+                getline(in, Id);
+                getline(in, Pass);
+        
+                cout<<"Entre your registered Gmail or Phone Number:"<<endl;           
+                cin>>id;
+                cout<<endl;
+        
+                cout<<"Entre correct Password:"<<endl;
+                cin>>pas;
+                cout<<endl;
+        
+                if((Id==id) && (Pass==pas)){
+                    string n;
+                    ifstream in("Profile.txt");
+                    getline(in, n);
+                
+                    cout<<"                                                     Welcome Back, "<<n<<endl;
+                    in.close();
+                    Match();
+                }
+                else{
+                    cout<<"You have entered wrong Id or Password, Please try again later:("<<endl;
+                    exit(0);
+                }
+                in.close();
+            }
+            else if(l==2){
+                cout<<"Thank You! for using our App, have a good day:)"<<endl;
+                exit(0);
+            }
+            else{}
+            
+            cout<<endl;
+            settings();
+        }
+        
+        else if(dec==3){
+            ChatBot();
+            settings();
+        }
+        
+        else{}
+    }
+    else if(set==0){
+        cout<<"Thank You! for using our App, have a good day:)"<<endl;
+        exit(0);
+    }
+    else{
+        cout<<"Sorry you have pressed wrong key, please try again:("<<endl;
+        settings();
+    }
+    
+}
