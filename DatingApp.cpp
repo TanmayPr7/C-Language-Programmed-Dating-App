@@ -22,3 +22,10 @@ void otpGen(){
     srand(time(0));        //Function to Generate OTP
     otp=rand()%max+999;
 }
+
+
+typedef struct BasicInfo{
+    string gmail;
+    string number;         //Structure to store LogIn Information
+    string pass;
+}info;
