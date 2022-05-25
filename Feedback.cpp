@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cstring>
 #include <fstream>
+using namespace std;
 
 void feedback(){            //Function to take feedback from users
     string fb;                                    
@@ -18,6 +19,8 @@ void feedback(){            //Function to take feedback from users
     }
     else{
         cout<<"Your Rating is invalid, please give us valid Rating Sir:)"<<endl;
+        cout<<endl;
+        feedback();
     }
     fe.close();
 }
